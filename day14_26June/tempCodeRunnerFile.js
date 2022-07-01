@@ -1,0 +1,1 @@
+calculateDaysBetweenDates('12/11/2000', '06/26/2022'));
