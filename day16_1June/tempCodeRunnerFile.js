@@ -1,16 +1,7 @@
-unction isArraySorted(arr, n) {
-    if (n === 1 || n === 0) {
-        return true;
-    }
-
-    if (arr[n - 1] < arr[n - 2]) {
-        return false
-    }
-
-    isArraySorted(arr, n - 1)
+if(checking(array, length)!=0)
+{
+    if (Ascending(array,length)!=0)
+    console.log ("In ascending order");
+    else if (Descending(array,length)!=0)
+    console.log("In descending order");
 }
-
-
-array1 = [2, 4, 5, 8];
-
-console.log(isArraySorted(array1)); n
