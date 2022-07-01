@@ -3,7 +3,7 @@
 // if the array is in dessending order then return "it is in dessending order"
 // if the array is not in assending or dessending order then return "not in assending or dessending order"
 
-const array = [1, 2, 3];
+const array = [1, 5, 3];
 let length = array.length;
 checking(array, length);
 
