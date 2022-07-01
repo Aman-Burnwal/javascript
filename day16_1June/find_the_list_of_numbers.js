@@ -22,16 +22,11 @@
 
 
 
-function countNumbers(n)
-{
-
-
+function countNumbers(n){
     if (n < 3)
         return n;
     if (n >= 3 && n < 10)
         return n - 1;
-
-
     var po = 1;
     while (parseInt(n / po) > 9)
         po = po * 10;
