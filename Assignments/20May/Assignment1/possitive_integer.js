@@ -5,14 +5,13 @@ function squareSum(num){
         while(b * b < num){
             if(a * a + b * b === num){
                 if(a <= b){
-                    console.log(a + "," +b)
+                    console.log(a + "," + b);
                 }
             }
-            b += num;
+            b += 1;
         }
         a += 1;
-    } 
+    }
 }
 
-squareSum(50)
-
+squareSum(50);
