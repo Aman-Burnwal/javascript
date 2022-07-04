@@ -1,7 +1,7 @@
 function palindromes(num) {
     if (num === 1) {
         console.log(num)
-        // return 1;
+        return 1;
     }
     for (let i = 1; i <= num; i++) {
         if (i < 10) {
