@@ -5,6 +5,23 @@
 // should not step out of the home.
 
 
-const prompt = require('prompt-sync')({sigint: true});
+const prompt = require('prompt-sync')();
 
-let 
+let temperatureis = parseInt(prompt("Your City temperature is  =>"));
+
+let israining = prompt("If raining write 'true' else 'false'  ");
+
+
+function childrensFuture(temperature, raining){
+    raining = Boolean(raining);
+    console.log(typeof(raining));
+    if((temperature => 20 && temperature <= 25) && raining == false ) {
+        console.log("Go to park");
+    } else if((temperature >= 18 && temperature <= 20) && raining == true) {
+        console.log("play in School");
+    } else {
+        console.log("live in home");
+    }
+}
+
+childrensFuture(temperatureis, israining)
