@@ -17,7 +17,7 @@ function nthFibonachiSeries(num){
         return 1;
     }
 
-    for(let i = 3; i <= num; i++){
+    for(let i = 1; i <= num; i++){
         nthFibonachi = firstNum + secondNum;
         firstNum = secondNum
         secondNum = nthFibonachi;
