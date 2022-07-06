@@ -7,5 +7,15 @@
 
 
 
-let num = 81;
+let num = 153;
+let org = num
+let sum = 0;
+let armstrong = "";
 
+while(num > 0){
+        sum += ((num % 10) * (num % 10) * (num % 10));
+        num = Math.floor(num / 10);
+        sum === org ? armstrong = "yes" : armstrong = "No";
+}
+
+console.log(armstrong);
