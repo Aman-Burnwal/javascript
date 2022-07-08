@@ -27,8 +27,16 @@ Explanation:
 */
 
 
-function heigh_of_prism(perimeter, radius, volume){
-    
+function height_of_prism(perimeter, radius, volume){
+    let semi_perimeter = perimeter / 2;
+    let area = radius * semi_perimeter;
+    let height = volume / area;
+
+    console.log(height);
 }
+
+height_of_prism(3, 15, 270);
+
+
 
 
