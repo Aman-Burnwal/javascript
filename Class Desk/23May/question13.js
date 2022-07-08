@@ -1,12 +1,12 @@
 // Print all the prime number up to a given number value.
 
-let num = 5;
+let num = 2;
 
 
 function isprime(num){
-    // if(num < 1){
-    //     return;
-    // }
+    if(num < 1){
+        return ;
+    }
     let primeis = true;
     for(let i = 2; i < num; i++){
         if(num % i === 0){
