@@ -9,7 +9,7 @@ function nthFibonachiSeries(num){
     let secondNum = 1;
     let nthFibonachi;
 
-    if(num === 1 || num === 0){
+    if(num === 1){
         return 0;
     }
 

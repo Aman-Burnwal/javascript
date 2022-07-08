@@ -2,8 +2,8 @@
 
 
 // //Default program
-// const prompt = require('prompt-sync')({sigint: true});
-// let number = parseInt(prompt("Enter your number to get factors of it   =>   " ));
+const prompt = require('prompt-sync')({sigint: true});
+let number = parseInt(prompt("Enter your number to get factors of it   =>   " ));
 
 
 // // 1. Using Iterations
