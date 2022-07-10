@@ -51,3 +51,18 @@ while(true){
 }
 
 console.log(lcm);
+
+
+function lcmis(num1, num2) {
+    let greater = NaN;
+    num1 > num2 ? greater = num1 : greater = num2;
+
+    while(true){
+        if(greater % num1 === 0 && greater % num2 === 0){
+            return greater;           
+        }
+        greater += 1;
+    }
+}
+
+console.log(lcmis(12, 16));
