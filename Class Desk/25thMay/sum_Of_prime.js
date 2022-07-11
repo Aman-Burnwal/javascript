@@ -26,7 +26,9 @@ function PrimeNumbers(num) {
                     break;
                 }
             }
-            a === true ? array.push(i) : "";
+            if(a === true){
+                array.push(i)
+            }
         }
     return array;
 }
@@ -38,10 +40,11 @@ function sumOfNum(num1){
     let num = PrimeNumbers(num1);
     // return console.log(num);
     let length = num.length - 1;
-    for(let i = 0; i <= length; i++) {
-        for(let j = i; i <= length; j++){
-            if(num[j] + num[i] === num1){
-                return console.log("your num is: ", (num[j] , num[i]));
+    for(let i = length; i >= 0; i--) {
+        for(let j = i; i >= 0; j--){
+            if(num[i] + num[j] === num1){
+                console.log("your num is: ", (num[j] , num[i]));
+                return;
             }
         }
     }
@@ -49,3 +52,21 @@ function sumOfNum(num1){
 
 // console.log(sumOfNum(15))
 sumOfNum(15);
+
+
+function isPrime(n) {
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+function sumPrime(n) {
+    for (let i = 2; i <= n / 2; i++) {
+        if (isPrime(i) && isPrime(n - i)) {
+            console.log(i, n - i);
+            return;
+        }
+    }
+}
+
+sumPrime(150);
