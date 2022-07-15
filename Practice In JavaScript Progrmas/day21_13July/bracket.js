@@ -11,4 +11,4 @@ function bracket(n,open,close,str) {
     }
 }
 
-a(3,0,0,"");
+bracket(3,0,0,"");
