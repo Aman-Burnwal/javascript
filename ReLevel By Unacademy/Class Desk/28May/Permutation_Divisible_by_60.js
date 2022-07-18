@@ -10,6 +10,7 @@ class MyApp{
     }
 
     isNumContainZero(num) {
+        let rem;
         while(num!= 0){
             
         }
