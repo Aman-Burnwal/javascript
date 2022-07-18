@@ -1,3 +1,5 @@
+// what is the output of the below code
+
 const car = {
     color: 'Black',
     speed: '120Kmph',
