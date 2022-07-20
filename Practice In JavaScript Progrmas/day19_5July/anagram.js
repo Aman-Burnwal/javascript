@@ -1,33 +1,20 @@
-
-
-let name1 = "Banti";
-let wrongName = "abnit";
-
-function anagram(name, wrongName){
-    nLength = name.length;
-    wLength = wrongName.length;
-    let a = nLength - 1;
-    let b = wLength - 1;
-    if(nLength != wLength){
-        return console.log("not same")
+let anagram = (s1, s2) => {
+    if (s1.length != s2.length) {
+        return false;
     }
 
-    for(let i = 0; i < nLength ; i++){
-        for(let j = 0; j < wLength; j++){
-            if(name[i] === wrongName[j]){
-                a--;
-                b--;
-                break;
-            }
+    let count = {}
+    for (let i of s1) {
+        count[i] = (count[i] || 0) + 1;
+    }
 
+    for (let j of s2) {
+        if (!count[j]) {
+            return false;
         }
+        count[j] -= 1.
     }
-    if(a  > 0 || b > 0){
-        return console.log("not")
-    }
-    else{
-        return console.log("Yes")
-    }
+    return true;
 }
 
-anagram(name1, wrongName);
+console.log(anagram('bunty', 'nubyt'))

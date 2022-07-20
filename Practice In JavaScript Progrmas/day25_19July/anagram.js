@@ -1,20 +1,20 @@
-let str1 = "banti";
-let str2 = "antib";
-
-
-console.log(anagram(str1, str2));
-
-function anagram(str1, str2) {
-    let stl1 = str1.length, stl2 = str2.length;
-    if (stl1 != stl2) {
+let anagram = (s1, s2) => {
+    if (s1.length != s2.length) {
         return false;
     }
-    stl1.sort;
-    stl2.sort;
-    for (let i = 0; i < stl1; i++) {
-        if (str1[i] != str2[i]) {
+
+    let count = {}
+    for (let i of s1) {
+        count[i] = (count[i] || 0) + 1;
+    }
+
+    for (let j of s2) {
+        if (!count[j]) {
             return false;
         }
+        count[j] -= 1.
     }
     return true;
 }
+
+console.log(anagram('bunty', 'nubyt'))
