@@ -18,21 +18,21 @@ function mergeAndCount(arr, l, m, r) {
             i++;
         } else {
             arr[k] = right[j];
-            //inversions = inversions + (m - l - i) + 1
-            inversions = inversions + (m + 1) - (l + i)
+            inversions = inversions + (m - l - i) + 1
+            //inversions = inversions + (m + 1) - (l + i)
             j++;
         }
         k++;
     }
 
     while (i < left.length) {
-        arr[k] = arr[i];
+        arr[k] = left[i];
         i++;
         k++;
     }
 
     while (j < right.length) {
-        arr[k] = arr[j];
+        arr[k] = right[j];
         j++;
         k++
     }
