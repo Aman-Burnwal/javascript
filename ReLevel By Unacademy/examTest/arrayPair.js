@@ -34,3 +34,17 @@
 
 // Explanation of Sample 1
 // Antonio can form the pairs as : (1st element, 3rd element), (4th element, 5th element)
+
+const pair = (arr, len) => {
+    i = 0;
+    sum = 0;
+    while(i < len - 1) {
+        if(arr[i] != arr[i + 1]){
+            sum += 1;
+        }
+        i+= 2;
+    }
+    return sum;
+}
+
+console.log(pair([1,2,3,4,5], 5));
