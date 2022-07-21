@@ -14,15 +14,13 @@ console.log(isArraySquareMagic(array));
 function isArraySquareMagic(array) {
     let presum = 0, sum = 0
     for (let i = 0; i < array.length; i++) {
-        let sum = 0
+        let row = 0, col = 0;
         for (let j = 0; j < array[0].length; j++) {
-            sum += array[i][j];
+            row += array[i][j];
+            col += array[j][i];
         }
-
-        if (i === 0) {
-            presum = sum;
-        }
-        if (presum != sum) {
+        
+        if (row != col) {
             return false;
         }
 
@@ -31,23 +29,6 @@ function isArraySquareMagic(array) {
 
     }
 
-    for (let i = 0; i < array.length; i++) {
-        let sum = 0
-        for (let j = 0; j < array[0].length; j++) {
-            sum += array[j][i];
-        }
-
-        if (i === 0) {
-            presum = sum;
-        }
-        if (presum != sum) {
-            return false;
-        }
-
-        presum = sum;
-
-
-    }
     return true;
 }
 
