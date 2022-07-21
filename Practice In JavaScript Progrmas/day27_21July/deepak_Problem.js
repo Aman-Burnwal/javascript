@@ -24,11 +24,11 @@ function mergeSort(arr, l, m, r) {
     let a2 = new Array(a2Len)
 
     for (let i = 0; i < a1Len; i++) {
-        a1[i] = a1[i + l]
+        a1[i] = arr[i + l]
     }
 
     for (let j = 0; j < a2Len; j++) {
-        a2[j] = a2[j + m + 1]
+        a2[j] = arr[j + m + 1]
     }
 
     let i = 0, j = 0, k = l;
