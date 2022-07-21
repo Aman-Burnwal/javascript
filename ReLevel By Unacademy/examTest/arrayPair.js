@@ -41,8 +41,11 @@ const pair = (arr, len) => {
     while(i < len - 1) {
         if(arr[i] != arr[i + 1]){
             sum += 1;
+            i+= 2;
+        } else {
+            i++;
         }
-        i+= 2;
+        
     }
     return sum;
 }
