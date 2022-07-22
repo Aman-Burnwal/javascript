@@ -6,4 +6,4 @@ contact me on telegram id: -
 
 # https://t.me/mr_amancse
 #               email id: - amakr06534@gmail.com , aman1@mailfence.com
-#               https://api.whatsapp.com/send/?phone=%2B917079540533&text&app_absent=0
+#               https://api.whatsapp.com/send/?phone=%2B917004203462&text&app_absent=0
