@@ -127,4 +127,58 @@ B – JSON.parse(string)                                                        
 C – JSON(string)
 D – JSON.jsonify(string)
 
+16. What is the output of relevel [1] of the following code?
+    var relevel = [3,,6];This question is required. 
+A. Undefined
+B. Error
+C. Null
+D. 0
+// Array has null value when no value is entered but if value at some index is omitted it takes undefined as value
+
+17)What is the functionality of the pop method in an array?
+a)decreases the length of array by one
+b)increases the length of array by one
+c)returns the deleted element
+d)deletes the first element of array
+Ans:a
+// Pop function delete the last element and hence decrease the array length by one
+
+18)What is the output of the following code?
+var one = [1,2,3];
+var two = [4,5,6];
+var ans = one.concat(two);
+console.log(ans);
+a)4,5,6,1,2,3
+b)1,2,3,4,5,6
+c)Error
+d)Null
+Ans:b
+// Concat is a predefined function in js which is used to combine elements of two arrays
+
+19)What is the output of javascript code?
+    var sum = 0;
+    var input = [10,20,30,80];
+    input.forEach((elem) => {
+        sum+=elem;
+        }
+    );
+a)140
+b)100
+c)80
+d)60
+Ans:a
+// forEach work in the same way as for loop and iterates through each element of the array
+
+5)What is the output of the following code?
+var a = [1,2,4,5,6];
+console.log(a.slice(0,2));
+a)[1,2]
+b)[5,6]
+c)[2,4]
+d)[1,2,4];
+Ans:a
+// slice is a predefined function in javascript which is used to return elements of an array from starting point to the ending point
+// as mentioned in function argument.
+
+
 */
