@@ -169,7 +169,7 @@ d)60
 Ans:a
 // forEach work in the same way as for loop and iterates through each element of the array
 
-5)What is the output of the following code?
+20) What is the output of the following code?
 var a = [1,2,4,5,6];
 console.log(a.slice(0,2));
 a)[1,2]
@@ -179,6 +179,51 @@ d)[1,2,4];
 Ans:a
 // slice is a predefined function in javascript which is used to return elements of an array from starting point to the ending point
 // as mentioned in function argument.
+
+
+
+
+
+21) Which operations are performed inside a for loop?This question is required. *
+
+A) Initialization
+B) Updation
+C) Testing
+D) All of the above                                                                 [correct answer]
+
+
+22) What is the functionality of a continue statement in a loop?This question is required. *
+
+A) Restarts the loop
+B) End the loop
+C) Skips the rest of the code in the loop iteration                                 [correct answer]
+D)none
+
+23) Which of the following executes the block, once before evaluating the conditional statement?This question is required. *
+
+A) Do while Loop                                                                    [correct answer]
+B) While loop
+C) For loop
+D) None
+
+
+24) Which among the following are examples of loops?This question is required. *
+
+A) For loop
+B) While Loop
+C) Do While Loop
+D) All of the above                                                                [correct answer]
+
+
+25) What is the functionality of the break statement?This question is required. *
+
+A) Jumps over to the next iteration
+B) Jumps out from the loop                                                         [correct answer]
+C) Skips the rest of the code inside the loop iteration
+D) None
+
+
+
 
 
 */
