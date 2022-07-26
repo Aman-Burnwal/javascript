@@ -54,3 +54,8 @@ function stableSelectionSort(arr) {
     return arr
 }
 
+// const arr2 = [3, 2, 5, 1, 43, 54, 23]
+
+// arr2.sort(function(a, b){return a - b})
+
+// console.log(arr2);
