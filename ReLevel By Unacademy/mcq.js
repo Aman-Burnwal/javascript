@@ -223,7 +223,44 @@ C) Skips the rest of the code inside the loop iteration
 D) None
 
 
+26)Which of the following is the memory location of (i, j)th element in a matrix of size nxm located at memory location 0 and size of each element is c.
+A) n*x + j*y
+B) i*x + j*y
+C) (i*m + j)*c                                                                      (CORRECT)
+D) i + j
 
+27) What is the output of Array.fill(2, 1, 3) for the given array: [1, 2, 3, 4, 5, 6]
+A) [1, 2, 3, 4, 5, 6]
+B) [1, 2, 2, 4, 5, 6]                                                               (CORRECT)
+C) [1, 2, 2, 2, 5, 6]
+D) None of the above
 
+28) What is the space complexity of an inplace operation on a matrix of size NxM.
+A) O(N*M)
+B) O(N^3)
+C) O(N + M)
+D) O(1)                                                                             (CORRECT)
+
+29) Determine the time complexity of the below code?
+
+for(var i = 0; i < n; i++) {
+	for(var j = 0; j < m; j++) {
+		if(j == m-1)
+		    break;
+      }
+      if(i < n)
+        break;
+}
+
+A) O(n*m)
+B) O(1)
+C) O(m)                                                                             (CORRECT)
+D) O(n)
+
+30) What is the result of calling Array.pop() on an empty array?
+A) undefined                                                                        (CORRECT)
+B) null
+C) No output
+D) None of the above
 
 */
