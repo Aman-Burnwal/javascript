@@ -263,4 +263,37 @@ B) null
 C) No output
 D) None of the above
 
+
+31) Given a 2D array A=[[1,2,3],[3,3,5]] which is the right way to access element 5
+a)A[0][2]
+b)A[1][2]                                                                        (CORRECT)
+c)A[1][3]
+c)A[2][3]
+
+32) Given an array as  A=[[1,2,3],[3,3,5]] what will be the output of A.length
+a)1
+b)2                                                                        (CORRECT)
+c)3
+d)4
+
+33) In the array A=[[1,2,3],[3,3,5]] which of the following statement will make 5 as 10
+A[1][2]=10
+A[1][2]=A[1][2]*2
+A[1][2]=A[1][2]+5
+All of the above                                                                        (CORRECT)
+
+34. Given an array as  A=[[1,2,3],[3,3,5]] what will be the output of A[2].length
+a)1
+b)2
+c)3
+d)4
+
+
+5. Given a 1D array as 1.2,3,4,5,6 on converting it into a 2x3 array the element at position 2,1 will be:
+a) 6                                                                        (CORRECT)
+b) 3
+c) 2
+d) 1
+
+
 */
