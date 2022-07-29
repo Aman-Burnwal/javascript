@@ -289,8 +289,8 @@ c)3
 d)4
 
 
-5. Given a 1D array as 1.2,3,4,5,6 on converting it into a 2x3 array the element at position 2,1 will be:
-a) 6                                                                        (CORRECT)
+35. Given a 1D array as 1.2,3,4,5,6 on converting it into a 2x3 array the element at position 2,1 will be:
+a) 6                                                                                    (CORRECT)
 b) 3
 c) 2
 d) 1
