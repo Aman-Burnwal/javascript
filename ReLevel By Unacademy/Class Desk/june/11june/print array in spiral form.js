@@ -1,3 +1,26 @@
+/*
+Approach
+
+Based on the spiral form, it is clear that we can solve this problem using loops
+and conditionals. If we follow the above image of spiral form, we can see that
+there are 4 directions where we need to move in order to print the output. We
+can follow those 4 directions to get our desired output.
+Let's have a look step by step -
+1. Initialize 4 variables - e(start row index), f(end row index), g(start column
+index), h(end column index)
+2. Create a loop and iterate over it until all elements got printed
+3. For each outer loop, print elements in clockwise direction
+4. Print eth row(from column index g to h) and increase k -> this will print top
+row
+5. Print (h - 1)th column(from row index e to f) and decrease h -> this will print
+right column
+6. Print (f - 1)th row (from column index (h - 1) to g) and decrease f -> this will
+print bottom row
+7. Print (g)th row(from row index f-1 to e) and increase g -> this will print left
+column
+*/
+
+
 const arr = [
     [1,  2,  3,  4],
     [12, 13, 14, 5],
