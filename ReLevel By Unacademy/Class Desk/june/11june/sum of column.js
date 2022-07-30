@@ -67,3 +67,12 @@ function columnSum(arr, M, N) {
 // [12,15,15]
 
 
+console.log(sumOfColumn(array));
+
+function sumOfColumn(arr) {
+    let ans = arr.reduce((a, b) => a.map((elemet , index) => elemet + b[index]));
+
+    return ans
+}
+
+
