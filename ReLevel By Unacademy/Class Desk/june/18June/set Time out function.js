@@ -27,9 +27,9 @@ for(var i = 0; i < 4; i++) {
 
 // loop 2
 
-
-for(let i = 0; i < 4; i++) {
-    setTimeout(() => {
-        console.log(i)
-    }, i * 1000);
-}
+// uncomment it and comment loop1
+// for(let i = 0; i < 4; i++) {
+//     setTimeout(() => {
+//         console.log(i)
+//     }, i * 1000);
+// }
