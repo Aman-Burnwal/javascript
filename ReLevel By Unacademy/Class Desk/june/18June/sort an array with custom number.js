@@ -10,29 +10,32 @@
 
 
 
-let arr = [0, 2, 1, 2, 3, 9, 5, 6, 2, 8, 1, 9]
+const customSort = (order, arr) => {
 
-let sortingType = 2356481790;
+    const numberObj = {};
+    const resArr = [];
 
-sortingType.toString;
-console.log
+    order.split('').map((item, index) => {
+        numberObj[item] = {
+            value: [],
+            order: index
+        };
+    })
 
-console.log(sortingType);
+    arr.map(item => {
+        numberObj[item].value.push(item);
+    });
 
-let result = (arr, sortingNumber) => {
-    let arr2 = new Array();
+    const sortedObj = Object.values(numberObj).sort((a, b) => (a.order > b.order) ? 1 : -1);
 
-    let i = 0;
-    while(i < arr.length) {
-        for(let j = 0; j < arr.length; j++) {
-            if(sortingNumber[i] === arr[j]) {
-                arr2.push(arr[j])
-            }
-        }
-        i++;
-
-    }
-
-    return arr2;
+    Object.values(sortedObj).map(item => {
+        resArr.push(...item.value)
+    });
+    
+    return resArr.join(' ');
 }
 
+const order = '2356481790';
+
+const arr = [1, 2, 9, 3, 1, 5, 6, 2, 8, 9, 0];
+console.log(customSort(order, arr));
