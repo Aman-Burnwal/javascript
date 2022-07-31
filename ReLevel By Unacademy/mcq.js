@@ -295,5 +295,56 @@ b) 3
 c) 2
 d) 1
 
+36. what is the output of the given code? 
+    const course = {
+        name : "JavaScript",
+        id : 1
+    }
 
+    const newCourse = new course;
+    newCourse.id = 2;
+    console.log(course.id);
+
+a) 1
+b) 2                                                                                (CORRECT)
+c) undefined
+d) error 
+
+
+37. what is the output of the given code? 
+    const course = {
+        name : "JavaScript",
+        id : 1
+    }
+
+    const newCourse ={...course};
+    newCourse.id = 2;
+    console.log(course.id);
+
+a) 1                                                                                (CORRECT)
+b) 2 
+c) undefined
+d) error 
+
+
+
+38. Pure function will return same output if same arguments are passed how many times it executes
+a) True                                                                             (CORRECT)
+b) False
+
+39. The data type which supports pass by reference is
+a) String    
+b) Number    
+c) Object                                                                           (CORRECT)
+d) Boolean
+
+
+40. What is the output of the given code ?
+
+a) 1    
+b) 6      
+c) null     
+d) undefined
 */
+
+
