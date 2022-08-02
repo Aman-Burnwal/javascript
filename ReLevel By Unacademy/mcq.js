@@ -345,6 +345,75 @@ a) 1
 b) 6      
 c) null     
 d) undefined
+
+41. Can we use “this” keyword in the child class constructor without using “super” keyword? 
+a. Yes
+b. No                                                                              (CORRECT)
+
+
+42. Predict the output:
+
+    class Parent {
+        displayValueP(value) {
+            console.log('Parent value: ', value);
+        }
+    };
+    class Child extends Parent{
+        displayValue(value){
+            console.log('Child value: ', value)
+        }
+    }
+    var obj = new Child();
+    obj.displayValueP('Test’);
+
+1. Child value: Test
+2. Parent value: Test                                                                     (CORRECT)
+3. Error
+4. None of the above
+
+
+43. Predict the output: 
+class Vehicle{
+    color;
+    type; //Electric or petrol or diesel based
+    no_of_tyres; // 4 wheelers or 2 wheelers
+    constructor(color, type,no_of_tyres){
+        this.color = color;
+        this.type = type;
+        this.no_of_tyres = no_of_tyres;
+    };
+};
+var bike = new
+Vehicle(“Green”,'Electric','2');
+onsole.log(bike.color);
+bike = new Vehicle();
+console.log(bike.color);
+
+1. Output: Green
+2. Green, Green
+3. Green, undefined                                                                  (CORRECT)
+4. None of the above 
+● Answer:  Green, undefined 
+
+44. Predict the output:
+class Vehicle{
+    color;
+    type; //Electric or petrol or diesel based
+    no_of_tyres; // 4 wheelers or 2 wheelers
+    constructor(color, type,no_of_tyres){
+        this.color = color;
+        this.type = type;
+        this.no_of_tyres = no_of_tyres;
+    };
+};
+var bike = new Vehicle(Green,'Electric','2');
+console.log(bike.color);
+
+1. Output: Green
+2. undefined
+3. Error: Green is not defined                                                      (CORRECT)
+4. None of the above
+
 */
 
 
