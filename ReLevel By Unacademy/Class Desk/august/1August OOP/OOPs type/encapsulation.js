@@ -77,7 +77,7 @@ class Student {
 class Vehical {
     #name;
     constructor(name, type, wheels) {
-        this.name = name;
+        this.#name = name;
         this.type = type;
         this.wheels = wheels;
     }
@@ -87,7 +87,9 @@ class Vehical {
     }
 }
 
-// var Vehical1 = new Vehical("BMW", "Petrol", 4);
+var Vehical1 = new Vehical("BMW", "Petrol", 4);
 
-// console.log(Vehical1); // i have made name as a private but when
-//  i am printing vehical1 it prints including its name, so my question why it is printing
+console.log(Vehical1); // Vehical { type: 'Petrol', wheels: 4 } here we are not getting name data because it is private 
+
+console.log(Vehical1.getName());  // now  it will print BMW
+
