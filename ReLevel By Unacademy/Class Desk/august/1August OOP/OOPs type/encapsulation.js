@@ -51,21 +51,43 @@ class Student {
 
 }
 
-
-let student1 = new Student();
-console.log(student1.getName());  // Banti
-
-
-// changing name 
-student1.setName("Aman");
-console.log(student1.getName()); // Aman
+// uncommet all lines to print
+// let student1 = new Student();
+// console.log(student1.getName());  // Banti
 
 
-console.log(student1.getName);  // [function : getName]  --> becuse getName is a function and we aren't using () key
+// // changing name 
+// student1.setName("Aman");
+// console.log(student1.getName()); // Aman
 
-// private keys are not accessible directly
-console.log(student1.university); // it is being because university is a private key but we can assign new properties with same name
 
-student1.university = "Jac";
+// console.log(student1.getName);  // [function : getName]  --> becuse getName is a function and we aren't using () key
 
-console.log(student1.university); // jac
+// // private keys are not accessible directly
+// console.log(student1.university); // it is being because university is a private key but we can assign new properties with same name
+
+// student1.university = "Jac";
+
+// console.log(student1.university); // jac
+
+
+
+
+
+class Vehical {
+    #name;
+    constructor(name, type, wheels) {
+        this.name = name;
+        this.type = type;
+        this.wheels = wheels;
+    }
+
+    getName() {
+        return this.#name;
+    }
+}
+
+// var Vehical1 = new Vehical("BMW", "Petrol", 4);
+
+// console.log(Vehical1); // i have made name as a private but when
+//  i am printing vehical1 it prints including its name, so my question why it is printing
