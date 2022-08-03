@@ -340,9 +340,13 @@ d) Boolean
 
 
 40. What is the output of the given code ?
-
+for (var i = 0; i < 6 ; i++) {
+    setTimeout(function () {
+        console.log(i);
+    }, i * 1000);
+}
 a) 1    
-b) 6      
+b) 6                                                                                (CORRECT)  
 c) null     
 d) undefined
 
