@@ -21,3 +21,6 @@ const objects = [
 ];
 
 console.log(objects);
+
+
+// incomplete
