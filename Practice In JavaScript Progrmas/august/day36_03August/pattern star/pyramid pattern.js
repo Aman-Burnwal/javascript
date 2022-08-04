@@ -4,13 +4,23 @@
 //  *******
 // *********
 
+pyramid(5);
+
 function pyramid(length) {
-    let star = "";
 
-    for(let i = 0; i < length; i++) {
+    for(let i = 0; i <= length; i++) {
+        let star = "", space = " ";
 
-        for (let j = 0; j < length; j++) {
-            
+        // for space
+        for(let j = 0; j <= Math.floor(length / 2) - i; j++) {
+            space += " ";
         }
+
+        // for star
+        for(let k = 1; k < i; k++) {
+            star += "*"
+        }
+
+        console.log(space+ star +star);
     }
 }
