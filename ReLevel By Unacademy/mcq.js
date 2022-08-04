@@ -377,47 +377,146 @@ b. No                                                                           
 
 
 43. Predict the output: 
-class Vehicle{
-    color;
-    type; //Electric or petrol or diesel based
-    no_of_tyres; // 4 wheelers or 2 wheelers
-    constructor(color, type,no_of_tyres){
-        this.color = color;
-        this.type = type;
-        this.no_of_tyres = no_of_tyres;
-    };
-};
-var bike = new
-Vehicle(“Green”,'Electric','2');
-onsole.log(bike.color);
-bike = new Vehicle();
-console.log(bike.color);
+        class Vehicle{
+            color;
+            type; //Electric or petrol or diesel based
+            no_of_tyres; // 4 wheelers or 2 wheelers
+            constructor(color, type,no_of_tyres){
+                this.color = color;
+                this.type = type;
+                this.no_of_tyres = no_of_tyres;
+            };
+        };
+        var bike = new
+        Vehicle(“Green”,'Electric','2');
+        onsole.log(bike.color);
+        bike = new Vehicle();
+        console.log(bike.color);
 
-1. Output: Green
-2. Green, Green
-3. Green, undefined                                                                  (CORRECT)
-4. None of the above 
-● Answer:  Green, undefined 
+    1. Output: Green
+    2. Green, Green
+    3. Green, undefined                                                                  (CORRECT)
+    4. None of the above 
+
 
 44. Predict the output:
-class Vehicle{
-    color;
-    type; //Electric or petrol or diesel based
-    no_of_tyres; // 4 wheelers or 2 wheelers
-    constructor(color, type,no_of_tyres){
-        this.color = color;
-        this.type = type;
-        this.no_of_tyres = no_of_tyres;
+
+    class Vehicle{
+        color;
+        type; //Electric or petrol or diesel based
+        no_of_tyres; // 4 wheelers or 2 wheelers
+        constructor(color, type,no_of_tyres){
+            this.color = color;
+            this.type = type;
+            this.no_of_tyres = no_of_tyres;
+        };
     };
-};
-var bike = new Vehicle(Green,'Electric','2');
-console.log(bike.color);
 
-1. Output: Green
-2. undefined
-3. Error: Green is not defined                                                      (CORRECT)
-4. None of the above
+    var bike = new Vehicle(Green,'Electric','2');
+    console.log(bike.color);
 
+    1. Output: Green
+    2. undefined
+    3. Error: Green is not defined                                                      (CORRECT)
+    4. None of the above
+
+
+45. From the below snippet, what is the function used here ?
+
+        ((fn, val) => {
+        return fn(val);
+        })(console.log, 5); 
+
+    A. Higher Order Function
+    B. Immediately Invoked Function
+    C. Both A and B
+    D. None of the above
+
+Answer: C
+
+46. What is the output of the given code ?
+        const obj = {
+        1: 1,
+        2: 2,
+        3: 3,
+        };
+
+        console.log(Object.keys(obj) == Object.values(obj)); 
+
+    A. true
+    B. false
+    C. equal
+    D. Null
+
+Answer: B
+
+47. What is the output of the below snippet ? 
+        (function(a){
+        return (function(){
+        console.log(a);
+        a = 6;
+        })()
+        })(21);
+
+    A. 21
+    B. 6
+    C. undefined
+    D. NaN
+
+Answer: A
+
+48. Which of the following are closures in Javascript ?
+    A. Variables
+    B. Functions
+    C. Objects
+    D. All of the above
+Answer: D
+
+49. Javascript function to display an “Relevel” in the alert box ?
+    A. alert(“Relevel”)
+    B. message(“Relevel”)
+    C. alertBox(“Relevel”)
+    D. messageBox(“Relevel”)
+
+Answer: A
+
+50. JSON supports?
+    A. Objects
+    B. Arrays
+    C. Primitives
+    D. All of the above
+
+Answer: D. All of the above
+
+51. Which of the following are benefits of JSON over XML?
+    A. It is faster and lighter than XML as on the wire data format
+    B. XML data is typeless while JSON objects are typed
+    C. XML data are all string
+    D. All of the above
+
+Answer: D. All of the above
+
+
+52. What two structures is JSON built on?
+    A. Collection of name/value objects, and an ordered list of objects, or array.
+    B. Collection of name/value pairs, and an ordered list of values, or array. ⇒
+    C. Collection of native-value pairs, and an ordered list of arrays, or values.
+    D. Collection of object/item pairs, and an ordered list of pairs, or array.
+
+Answer: B. Collection of name/value pairs, and an ordered list of values, or array. ⇒
+
+53. Which of the following is not an example of closures?
+    A. Objects
+    B. Variables
+    C. Functions
+    D. Graphics ⇒
+Answer: D. Graphics
+
+
+54. What happens if the base condition is not defined in recursion ?
+    A. Stack underflow
+    B. Stack Overflow
+    C. None of these
+    D. Both A and B
+Answer: B. Stack Overflow
 */
-
-
