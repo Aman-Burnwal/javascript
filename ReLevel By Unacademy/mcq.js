@@ -53,7 +53,7 @@ var input = [1,2,4,5,6, 7];
 input.filter(x => x>3);
 console.log(input);
 
-a) 1,2,3,4,5,6                                                                                                   [correct answer]
+a) 1,2,3,4,5,6,7                                                                                                   [correct answer]
 b) 4,5,6,7
 c) 1,2,3
 d) Error
@@ -244,9 +244,9 @@ D) O(1)                                                                         
 29) Determine the time complexity of the below code?
 
 for(var i = 0; i < n; i++) {
-	for(var j = 0; j < m; j++) {
-		if(j == m-1)
-		    break;
+    for(var j = 0; j < m; j++) {
+        if(j == m-1)
+            break;
       }
       if(i < n)
         break;
@@ -519,4 +519,147 @@ Answer: D. Graphics
     C. None of these
     D. Both A and B
 Answer: B. Stack Overflow
+
+
+55. The first thing to enter in the Call Stack is _________.
+    A. Local Execution Context
+    B. Micro task Queue
+    C. Callback Queue
+    D. Global execution context.
+
+Ans. Global execution context.
+
+56. clearInterval() clears the time interval in the setInterval().
+    A. True
+    B. False
+
+Ans. False (clearInterval() is the method used to stop the interval altogether and not just clear the interval time)
+
+57. Predict the output.
+        function cheese(){
+        console.log('Add lots of cheese');
+        }
+        function patty(cheese){
+        cheese();
+        console.log('Add veggies and
+        patties');
+        }
+        function bun(patty){
+        console.log('Take two fresh buns');
+        patty(cheese);
+        }
+        function burger(bun){
+        setTimeout(() => {
+        console.log('Our Burger is
+        ready');
+        bun(patty);
+        }, 2000);
+        }
+        burger(bun);
+        console.log('Lets make a Burger');
+A. Lets make a Burger
+    Add lots of cheese
+    Add veggies and patties
+    Take two fresh buns
+    Our Burger is ready
+
+B. Add lots of cheese
+    Add veggies and patties
+    Take two fresh buns
+    Our Burger is ready
+    Lets make a Burger
+
+C. Error
+
+D. Let's make a Burger
+    Our Burger is ready
+    Take two fresh buns
+    Add lots of cheese
+    Add veggies and patties
+    
+Answer :-Lets make a Burger
+        Our Burger is ready
+        Take two fresh buns
+        Add lots of cheese
+        Add veggies and patties
+
+58. Timing events in JS are part of ___________.
+
+    A. Web API
+    B. Timer API
+    C. Window/Global Object
+    D. None of the above
+
+Ans. Window/Global Object
+
+59. Call Stack works in a ________ manner.
+    A. Based on priority
+    B. First In First Out
+    C. Last in First Out
+    D. None of the above.
+
+Ans. Last in First Out
+
+60. Predict the output
+        var k = 0;
+        let j=setInterval(()=>{
+        k+=1;
+        console.log(k)
+        if( k === 10 ){
+        clearInterval()
+        }
+        },1000);
+
+    A. Error
+    B. 1
+    C. 1 2 3 4……10
+    D. 1 2 3 4…….
+
+Ans: 1 2 3 4…..
+
+61. Predict the output
+
+        var k = 0;
+        let j=setInterval(()=>{
+        k+=1;
+        console.log(k)
+        if( k === 10 ){
+        clearInterval(j)
+        }
+        },1000);
+
+    A. Error
+    B. 1
+    C. 1 2 3 4……10
+    D. 1 2 3 4…….
+
+Ans: 1 2 3 4…..10
+
+62. Select the correct ordering for below program:
+
+        var sum;
+        function printSum(sum){
+        console.log(sum);
+        }
+        sum = (num1, num2)=>{
+        printSum(num1+num2);
+        }
+        sum(5,7);
+
+    A.  Syntax Error
+    B.  STACK
+        printSum()
+        sum()
+        Global Executation Context
+
+    C.  printSum()
+        sum()
+
+ANS: B
+    
+
+
+
+
+
 */
