@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surver form</title>
+</head>
+
+<body>
+    <h3>Survey form</h3>
+    <form>
+        <table>
+            <tr>
+                
+                <td>
+                    <!-- Name input box -->
+                    <label for="name">Enter your name: </label>
+                </td>
+                <td>
+                    <input type="text" id="name" name="name">
+                </td>
+            <tr>
+                <!--Gender Section-->
+                <td>
+                    <label for="gender">Gender: </label>
+                </td>
+                <td>
+
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="age">age<span style="color:red;">&nbsp;*</span></label>
+                </td>
+                <td>
+                    <select name="age" id="age">
+                        <option value="Between 0 - 5">Between 0 - 5</option>
+                        <option value="Between 5 - 12">Between 5 - 12</option>
+                        <option value="Between 12 - 18">Between 12 -18</option>
+                        <option vaule="Between 18 - 60">Betwwen 18 - 60</option>
+                        <option vaule="More than 60">More than 60</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <lable for="language">you know language<span style="color:red;">&nbsp;*</span></lable>
+                </td>
+                <td>
+                    <input type="checkbox" id="English" value="English" name="English">
+                    <label for="English">English</label>
+                    <input type="checkbox" id="Hindi" value="Hindi" name="Hindi">
+                    <label for="Hindi">Hindi</label>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="Review">Please write Review</label>
+                </td>
+                <td>
+                    <textarea name="Review" id="Review" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Submit" onclick="displayData()">
+                </td>
+            </tr>
+
+
+        </table>
+    </form>
+    <script>
+        function displayData() {
+            let name = "Not specified";
+            let gender = "Not specified";
+            let age = "Not specified";
+            let language = "Not specified";
+            let reviewComments = "Not specified";
+
+            if (document.getElementById("name").value !== null && document.getElementById("name").value !== "") {
+                name = document.getElementById("name").value;
+            }
+
+            if (document.getElementById("male").checked || document.getElementById("female").checked) {
+                gender = document.getElementById("male").checked ? "Male" : "Female";
+            }
+
+            if (document.getElementById("age").value) {
+                age = document.getElementById("age").value
+            }
+            if(document.getElementById("English").checked && document.getElementById("Hindi".checked)) {
+                language = document.getElementById("English").value + " " +document.getElementById("Hindi").value
+                
+            } else if(document.getElementById("English").checked) {
+                language = document.getElementById("English").value
+            } else if(document.getElementById("Hindi").checked) {
+                language = document.getElementById("Hindi").value
+            }
+
+            let printOutput = `Name is ${name},\n Gender is ${gender}, \nAge is ${age}\n language you know ${language}`;
+
+            alert(printOutput)
+        }
+    </script>
+
+</body>
+
+</html>

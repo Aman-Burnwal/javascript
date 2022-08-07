@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2> Survey Form App </h2>
+
+    <form>
+
+        <!-- Name input box -->
+        <label for="name">Enter your name: </label>
+        <input type="text" id="name" name="name">
+
+        <!-- Gender radio button-->
+        <br>
+        <label for="gender">Gender: </label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <!-- Age dropdown-->
+        <br>
+        <label for="age">Age:</label>
+        <select name="age" id="age">
+            <option value="Under 10">Under 10</option>
+            <option value="Between 10 to 25">Between 10-25</option>
+            <option value="Between 25 to 60">Between 25-60</option>
+            <option value="Above 60">Above 60</option>
+        </select>
+
+        <!--Country visited checkbox-->
+        <br>
+        <label for="countriesVisited">Select the countries you like:</label>
+        <input type="checkbox" id="switzerland" name="switzerland" value="Switzerland">
+        <label for="switzerland">Switzerland</label>
+        <input type="checkbox" id="usa" name="usa" value="United States of America">
+        <label for="usa">United States of America</label>
+        <input type="checkbox" id="india" name="india" value="India">
+        <label for="india">India</label>
+
+        <!--Review comments text area-->
+        <br><br>
+        <label for="reviewComments">Please write your review</label>
+        <textarea id="reviewComments" name="reviewComments" rows="4" cols="50">
+
+        </textarea>
+
+        <br><br>
+        <input type="submit" value="Submit" onclick="displayData()">
+
+    </form>
+
+
+    <script>
+
+        function displayData() {
+            let name = "Not specified";
+            let gender = "Not specified";
+            let age = "Not specified";
+            let countriesVisited = "Not specified";
+            let reviewComments = "Not specified";
+
+            if (document.getElementById("name").value !== null && document.getElementById("name").value !== "") {
+                name = document.getElementById("name").value;
+            }
+
+            if (document.getElementById("male").checked || document.getElementById("female").checked) {
+                gender = document.getElementById("male").checked ? "Male" : "Female";
+            }
+
+            if (document.getElementById("age").value) {
+                age = document.getElementById("age").value
+            }
+
+            let printOutput = `Name is ${name}, Gender is ${gender}, Age is ${age}`;
+
+            alert(printOutput)
+        }
+
+    </script>
+
+
+</body>
+
+
+</html>
