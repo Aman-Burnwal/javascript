@@ -656,10 +656,24 @@ Ans: 1 2 3 4…..10
         sum()
 
 ANS: B
-    
+
+
+63. Output of the code:
+
+        var p = new Promise((resolve, reject) => {
+            reject(Error('The Fails!'))
+        })
+        p.catch(error => console.log(error.message))
+        p.catch(error => console.log(error.message))
+
+    A. Print once
+    B. Print twice
+    C. Exit with error
+    D. No warning
 
 
 
 
 
 */
+
