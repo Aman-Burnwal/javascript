@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./src/styles.css" media="print">
+    <style media="print">
+        h3 {
+            color: green;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div id="app">
+        <h1>Examples of Table </h1>
+        <table style="border:1px solid green">
+            <tr>
+                <th>Name</th>
+                <th> Roll No</th>
+            </tr>
+            <tr>
+                <td>TANAY TAPANSHU</td>
+                <td> 43</td>
+            </tr>
+            <tr>
+                <td>Shubham Kr</td>
+                <td> 25</td>
+            </tr>
+        </table>
+
+
+        <h1>Examples of media attribute </h1>
+    </div>
+
+    <h3>Example of media attribute in anchor element <h3>
+            <a href="https://www.linkedin.com/feed/" target="_blank" media="print and (resolution:300dpi)">
+                Open Linkedin
+            </a>
+            <a style="margin:5px" href="https://github.com/TANAYTAPANSHU" target="_blank"
+                media="print and (resolution:300dpi)">
+                Open Github
+            </a>
+
+            <div>
+                <h3>Example of media attribute in area element <h3>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/native-collegebeats.appspot.com/o/disneylogo.png?alt=media&token=a23b0209-d2c5-49b3-b984-98ea7faf5d63"
+                            alt="Workplace" usemap="#workmap" width="150" height="139">
+
+                        <map name="workmap">
+                            <area shape="rect" coords="34,44,270,350" alt="hotstar" href="https://www.hotstar.com/in">
+                            <area shape="rect" coords="290,172,333,250" alt="primevideo"
+                                href="https://www.primevideo.com/?ref_=dvm_pds_amz_in_as_s_g_176_mkw_s4mEHKPKZ-dc&mrntrk=pcrid_394383628233_slid__pgrid_82649959567_pgeo_1007768_x__ptid_kwd-339065342343">
+                            <area shape="circle" coords="337,300,44" alt="apple" href="https://tv.apple.com/">
+                        </map>
+            </div>
+            <div>
+                <h3>Example of media attribute in source element </h3>
+                <picture>
+                    <source media="(min-width: 600px)"
+                        srcset="https://firebasestorage.googleapis.com/v0/b/native-collegebeats.appspot.com/o/Made%20with%20love.png?alt=media&token=f54a1800-8dd9-4644-95f8-63a37a0f6fce">
+                    <source media="(min-width: 400px)"
+                        srcset="https://firebasestorage.googleapis.com/v0/b/native-collegebeats.appspot.com/o/Eshop.png?alt=media&token=5f6c3456-a59d-4a8f-918e-e92ab96674ed">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/native-collegebeats.appspot.com/o/galaxyMobile.jpeg?alt=media&token=cf6e4921-f245-4354-8ee1-edfb03715b87"
+                        style="width:auto;">
+                </picture>
+            </div>
+
+            <h1> Example of Video </h1>
+            <video width="320" height="240" autoplay muted>
+                <source
+                    src="https://firebasestorage.googleapis.com/v0/b/native-collegebeats.appspot.com/o/Youtube%20Clone%20DevTube.mp4?alt=media&token=937cc342-1d06-4b91-acf2-19a30fa7226d"
+                    type="video/mp4">
+                <source
+                    src="https://firebasestorage.googleapis.com/v0/b/native-collegebeats.appspot.com/o/Youtube%20Clone%20DevTube.mp4?alt=media&token=937cc342-1d06-4b91-acf2-19a30fa7226d"
+                    type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+
+            <h1> Example of Audio </h1>
+
+            <audio controls>
+                <source src="https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3" type="audio/mp3">
+
+            </audio>
+
+            <h1>Example of image </h1>
+
+            <img src="https://firebasestorage.googleapis.com/v0/b/native-collegebeats.appspot.com/o/galaxyMobile.jpeg?alt=media&token=cf6e4921-f245-4354-8ee1-edfb03715b87"
+                style="width:auto;">
+
+            <h1> Example of SVG </h1>
+            <svg width="100" height="100">
+                <rect width="150" height="150" stroke="red" stroke-width="5" fill="yellow" />
+            </svg>
+
+            <h1> Example of Canvas <h1>
+                    <canvas id="myCanvas" width="400" height="200" style="border:1px solid #d3d3d3;">
+                        Your browser does not support the HTML canvas tag.</canvas>
+                    <script>
+                        var c = document.getElementById("myCanvas");
+                        var ctx = c.getContext("2d");
+                        ctx.font = "30px Arial";
+                        ctx.fillText("Hello World", 100, 100);
+                    </script>
+
+</body>
+
+</html>

@@ -671,7 +671,70 @@ ANS: B
     C. Exit with error
     D. No warning
 
+64. Output of the code:
+        Promise.resolve('A')
+            .then(() => {
+                throw Error('OMG')
+            })
+            .catch(error => {
+                return 'Works'
+            })
+            .then(data => {
+                throw Error('Not worked' )
+            })
+            .catch(error => console.log(error.message))
 
+    A. Print “OMG” and “Not worked”
+    B. Print “Works”
+    C. Print “OMG”
+    D. Print “Not Worked”
+
+Ans. D. Print "Not Worked"
+
+65. Which of the following method is used to get value from generator-iterator objects in JavaScript?
+    A. next
+    B. yield
+    C. done
+    D. stop
+
+Ans. A. next
+
+66. Promise.all is rejected if any of the elements are rejected.
+    A. True
+    B. False
+
+Ans A. True
+
+67. What will be state and value of promise p in the code.
+        var p = new Promise(function(resolve, reject) {
+        throw "Sorry";
+        }).
+        then((data) => console.log(data), (data) => data);
+
+    A. State: fulfilled, value: "Sorry"
+    B. State: rejected, value: "Sorry"
+    C. State: fulfilled, value: undefined
+    D. State: rejected, value: undefined
+
+Ans. A. State: fulfilled, value: "Sorry"
+
+68. What is the purpose of the basic validation?This question is required. 
+
+    A. Data correctness
+    B. Mere data existence
+    C. Both Data correctness and Mere data existence
+    D. Data modification
+
+Ans. B. Mere data existence
+
+69.The correct sequence of HTML tags for starting a webpage is -This question is required. *
+
+    A. Head, Title, HTML, body
+    B. HTML, Body, Title, Head
+    C. HTML, Head, Title, Body
+    D. HTML, Head, Title, Body
+
+Ans. D. HTML, Head, Title, Body
 
 
 
