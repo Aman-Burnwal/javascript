@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #ff7ed766;
+        }
+
+        #login {
+            font-size: 30px;
+        }
+
+        #s,
+        #e {
+            border: 2px solid black;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            height: 35px;
+            width: 235px;
+            font-size: 14px;
+            font-family: Monospace;
+            /* color-interpolation: white; */
+        }
+
+        #sname {
+            border: 2px solid green;
+            border-radius: 6px;
+            background-color: green;
+            margin-bottom: 20px;
+            height: 40px;
+            width: 120px;
+            font-size: 18px;
+            font-family: Monospace;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d">
+        <h2 id="login">Starting basic program in @dvanced way___❤️</h2>
+        <input type="text" placeholder="Enter starting position..." id="s"><br>
+        <input type="text" placeholder="Enter ending position..." id="e"><br>
+
+        <input type="button" value="Submit" id="sname" onclick="javascript:PrintPrime()">
+
+
+        <p id="ans"></p>
+        <script>
+
+            //javascript code for print prime no.
+
+            function PrintPrime() {
+                var s = document.getElementById("s").value
+                var e = document.getElementById("e").value
+
+                for (let i = s; i < e; i++) {
+                    prime = 0;
+                    let totalprime = ""
+                    for (let j = 2; j < i; j++) {
+                        if (i % j === 0) {
+                            prime = 1;
+                        }
+                    }
+                    if (prime === 0) {
+                        // totalprime += i +"\n";
+                        document.getElementById('ans').innerHTML = i;
+                    }
+
+                }
+            }
+        </script
+   </body>
+  </html>
