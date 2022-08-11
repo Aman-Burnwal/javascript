@@ -736,6 +736,53 @@ Ans. B. Mere data existence
 
 Ans. D. HTML, Head, Title, Body
 
+70.Recursion is a method in which solution of a problem depends on ______________
+
+	a.Larger instances of different problem
+	b.Larger instances of same problem
+	c.Smaller instances of different problem
+	d.Smaller instances of same problem
+
+Ans - d. Smaller instances of different problem
+
+
+71.Which of the following we can’t solve using recursion?
+	a.Factorial of a number
+	b.Length of a string
+	c.Nth fibonacci number
+	d.Problems without base case.
+
+Ans - d. Problems without base case.
+
+72.In recursion, the condition for which the function will stop calling itself __________?
+	a.Base case
+	b.Worst case
+	c.Best case
+	d.There is no such condition
+
+Ans - a.Base Case
+
+
+73.Consider the recursive function recur(n, k). You need to find the value of recur(4,3).
+Pseudocode:-
+
+	a.13
+    b.8
+	c.10
+	d.12  
+
+Ans -  b.8
+
+
+74. The data structure used to implement recursive function calls ____________
+    a.Array
+    b.Binary tree
+    c.Linked list
+    d.Stacks
+    
+Ans - d.Stacks
+
+
 
 
 */
