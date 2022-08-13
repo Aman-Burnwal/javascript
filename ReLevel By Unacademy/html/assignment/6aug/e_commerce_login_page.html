@@ -1,71 +1,271 @@
 <html>
-
 <head>
-  <style>
-    body {
-      background-image: url('b.jpg');
+<title>Student Registration Form</title>
 
-    }
-
-    #d {
-      border: 2px solid green;
-      border-radius: 8px;
-      text-align: center;
-      width: 70%;
-      height: auto;
-      max-width: 400px;
-      max-height: fit-content;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 10%;
-      margin-bottom: 10%;
-    }
-
-    #login {
-      font-size: 50px;
-    }
-
-    #uname,
-    #pname {
-      border: 2px solid black;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      height: 35px;
-      width: 210px;
-      font-size: 15px;
-      font-family: Monospace;
-      /* color-interpolation: white; */
-    }
-
-    #sname {
-      border: 2px solid green;
-      border-radius: 6px;
-      background-color: green;
-      margin-bottom: 20px;
-      height: 40px;
-      width: 120px;
-      font-size: 20px;
-      font-family: Monospace;
-      color: white;
-    }
-  </style>
 </head>
-
+ 
 <body>
-  <div id="d">
-    <h1 id="login">Login</h1>
-    <input type="text" placeholder="Enter your username..." id="uname"><br>
-    <input type="password" placeholder="Enter your password..." id="pname"><br>
+<h3>STUDENT REGISTRATION FORM</h3>
 
-    <a href="https://mjvirusofficial.github.io/Mjvirus.com/index.html#Bulb_project"><input type="button" value="Submit"
-        id="sname">
-    </a>
+ 
+<table align="center" cellpadding = "10">
 
-  </div>
+<tr>
+<td>FIRST NAME</td>
+<td><input type="text" name="First_Name" maxlength="40"/>
+(max 40 characters a-z and A-Z)
+</td>
+</tr>
+ 
 
+<tr>
+<td>LAST NAME</td>
+<td><input type="text" name="Last_Name" maxlength="40"/>
+(max 40 characters a-z and A-Z)
+</td>
+</tr>
+ 
+<tr>
+<td>DATE OF BIRTH</td>
+ 
+<td>
+<select name="Birthday_day" id="Birthday_Day">
+<option value="-1">Day:</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+ 
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+ 
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+ 
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+ 
+<option value="31">31</option>
+</select>
+ 
+<select id="Birthday_Month" name="Birthday_Month">
+<option value="-1">Month:</option>
+<option value="January">Jan</option>
+<option value="February">Feb</option>
+<option value="March">Mar</option>
+<option value="April">Apr</option>
+<option value="May">May</option>
+<option value="June">Jun</option>
+<option value="July">Jul</option>
+<option value="August">Aug</option>
+<option value="September">Sep</option>
+<option value="October">Oct</option>
+<option value="November">Nov</option>
+<option value="December">Dec</option>
+</select>
+ 
+<select name="Birthday_Year" id="Birthday_Year">
+ 
+<option value="-1">Year:</option>
+ 
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+<option value="1990">1990</option>
+ 
+</select>
+</td>
+</tr>
+ 
+
+<tr>
+<td>EMAIL ID</td>
+<td><input type="text" name="Email_Id" maxlength="100"/></td>
+</tr>
+ 
+
+<tr>
+<td>MOBILE NUMBER</td>
+<td>
+<input type="text" name="Mobile_Number" maxlength="10" />
+(10 digit number)
+</td>
+</tr>
+ 
+
+<tr>
+<td>GENDER</td>
+<td>
+Male <input type="radio" name="Gender" value="Male" />
+Female <input type="radio" name="Gender" value="Female" />
+</td>
+</tr>
+ 
+
+<tr>
+<td>ADDRESS <br /><br /><br /></td>
+<td><textarea name="Address" rows="2" cols="20"></textarea></td>
+</tr>
+ 
+
+<tr>
+<td>CITY</td>
+<td><input type="text" name="City" maxlength="30" />
+(max 30 characters a-z and A-Z)
+</td>
+</tr>
+ 
+
+<tr>
+<td>PIN CODE</td>
+<td><input type="text" name="Pin_Code" maxlength="6" />
+(6 digit number)
+</td>
+</tr>
+ 
+
+<tr>
+<td>STATE</td>
+<td><input type="text" name="State" maxlength="30" />
+(max 30 characters a-z and A-Z)
+</td>
+</tr>
+ 
+
+<tr>
+<td>COUNTRY</td>
+<td><input type="text" name="Country" value="India" readonly="readonly" /></td>
+</tr>
+ 
+
+ 
+<tr>
+<td>HOBBIES <br /><br /><br /></td>
+ 
+<td>
+Drawing
+<input type="checkbox" name="Hobby_Drawing" value="Drawing" />
+Singing
+<input type="checkbox" name="Hobby_Singing" value="Singing" />
+Dancing
+<input type="checkbox" name="Hobby_Dancing" value="Dancing" />
+Sketching
+<input type="checkbox" name="Hobby_Cooking" value="Cooking" />
+<br />
+Others
+<input type="checkbox" name="Hobby_Other" value="Other">
+<input type="text" name="Other_Hobby" maxlength="30" />
+</td>
+</tr>
+
+<tr>
+<td>QUALIFICATION <br /><br /><br /><br /><br /><br /><br /></td>
+ 
+<td>
+<table>
+ 
+<tr>
+<td align="center"><b>Sl.No.</b></td>
+<td align="center"><b>Examination</b></td>
+<td align="center"><b>Board</b></td>
+<td align="center"><b>Percentage</b></td>
+<td align="center"><b>Year of Passing</b></td>
+</tr>
+ 
+<tr>
+<td>1</td>
+<td>Class X</td>
+<td><input type="text" name="ClassX_Board" maxlength="30" /></td>
+<td><input type="text" name="ClassX_Percentage" maxlength="30" /></td>
+<td><input type="text" name="ClassX_YrOfPassing" maxlength="30" /></td>
+</tr>
+ 
+<tr>
+<td>2</td>
+<td>Class XII</td>
+<td><input type="text" name="ClassXII_Board" maxlength="30" /></td>
+<td><input type="text" name="ClassXII_Percentage" maxlength="30" /></td>
+<td><input type="text" name="ClassXII_YrOfPassing" maxlength="30" /></td>
+</tr>
+ 
+<tr>
+<td>3</td>
+<td>Graduation</td>
+<td><input type="text" name="Graduation_Board" maxlength="30" /></td>
+<td><input type="text" name="Graduation_Percentage" maxlength="30" /></td>
+<td><input type="text" name="Graduation_YrOfPassing" maxlength="30" /></td>
+</tr>
+ 
+<tr>
+<td>4</td>
+<td>Masters</td>
+<td><input type="text" name="Masters_Board" maxlength="30" /></td>
+<td><input type="text" name="Masters_Percentage" maxlength="30" /></td>
+<td><input type="text" name="Masters_YrOfPassing" maxlength="30" /></td>
+</tr>
+ 
+<tr>
+<td></td>
+<td></td>
+<td align="center">(10 char max)</td>
+<td align="center">(upto 2 decimal)</td>
+</tr>
+</table>
+ 
+</td>
+</tr>
+ 
+<!----- Course ---------------------------------------------------------->
+<tr>
+<td>COURSES<br />APPLIED FOR</td>
+<td>
+BCA
+<input type="radio" name="Course_BCA" value="BCA">
+B.Com
+<input type="radio" name="Course_BCom" value="B.Com">
+B.Sc
+<input type="radio" name="Course_BSc" value="B.Sc">
+B.A
+<input type="radio" name="Course_BA" value="B.A">
+</td>
+</tr>
+ 
+<!----- Submit and Reset ------------------------------------------------->
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+ 
+</form>
+ 
 </body>
-<script>
-
-</script>
-
 </html>
