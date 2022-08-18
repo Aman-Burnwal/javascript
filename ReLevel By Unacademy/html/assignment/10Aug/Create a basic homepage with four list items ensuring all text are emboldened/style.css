@@ -1,0 +1,10 @@
+header {
+    color: Red;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+header,li {
+    font-weight: bold;
+}
