@@ -35,7 +35,7 @@ class List {
         this.tail.next = newNode;
         // telling our linked list that new object is your new tail 
         // if we don't use it then we will get as tail as head;
-        this.next + newNode;
+        this.tail = newNode;
         // increasing list size
         this.size++;
     }
