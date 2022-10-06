@@ -42,26 +42,31 @@ Constraints:
  */
 var isPalindrome = function (x) {
 
+    // if our x value is greater than 0 and smaller than 10 then it will be palindrome so i am simply returning it 
+    // as true
     if (x < 10 && x >= 0) return true;
 
+    // creating a variable to store opposite values 
     let newX = 0;
+    // temp is our temorary variable where we assigned our "x" value. it will help us to get the opposite number
     let temp = x;
 
-
+    // while loop is started it will give us opposite integer number
     while (temp > 9) {
 
-      
+        // this is storing our opposite number(remineder)
         newX = (newX * 10) + Math.floor(temp % 10)
-        
+        // this is storing our rest number whom we need to convert in opposite
         temp = Math.floor(temp / 10);
 
-
+        // last step to store last reminder in newX variable;
         if (temp <= 9) {
             newX = (newX * 10) + temp
 
         }
     }
-
+    
+    // returns true if opposite number (newX) is equal to input number(x);
     return newX === x
 
 };
