@@ -1,33 +1,24 @@
-/**
- * @param {string} s
- * @return {boolean}
- */
-var isValid = function (s) {
-    const blank = [];
-    const porenst = "() {} []"
-
-    let i = 0;
-
-    while (i < s.length) {
-        blank.push(s[i])
-        i++;
-        console.log(blank)
-        console.log(i)
-
-        let open = blank[blank.length - 2];
-        let closed = blank[blank.length - 1]
-
-        let potParent = open + closed;
-        
-
-        if (porenst.includes(potParent)) {
-            console.log("remove data is           " +potParent)
-            blank.pop();
-            blank.pop();
-        }
+class List {
+    constructor(data) {
+        this.head = {
+            value: data,
+            next: null,
+        };
+        this.tail = this.head;
+        this.size = 1;
     }
-    return blank.length === 0;
+    appendAdd(nodeData) {
+        let newNode = {
+            value: nodeData,
+            next: null,
+        }; 
+        this.tail.next = newNode;
+        this.tail = newNode;
+        this.size++;
 
-};
+    }
+}
 
-console.log(isValid("(){}[]"))
+let list = new List(200)
+list.appendAdd(300)
+console.warn(list)
