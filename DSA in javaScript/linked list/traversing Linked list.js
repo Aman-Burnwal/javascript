@@ -1,42 +1,47 @@
-class LinkedList {
+// create a basic linked list using function
+//
+
+class LinkedList{
+    // creating our head
     constructor(data) {
         this.head = {
             value: data,
-            next: null,
+            next: null
         };
         this.tail = this.head;
         this.size = 1;
+
     }
 
-    // adding new value
-    add(data) {
+    // adding our new tail
+    add(newTailData) {
         let newNode = {
-            value: data,
+            value: newTailData,
             next: null,
         };
-
         this.tail.next = newNode;
         this.tail = newNode;
         this.size++;
-
     }
-    // travesing
 
+    // traversing in our list
     traversing() {
         let counter = 0;
         let currentNode = this.head;
         while (counter < this.size) {
             console.log(currentNode);
             currentNode = currentNode.next;
-            counter++
+            counter++;
+            
         }
     }
+
+
 }
 
 
-const list1 = new LinkedList(40);
-
-list1.add(43);
-list1.add(56);
-list1.traversing();
-// console.log(list1);
+const list = new LinkedList(4);
+list.add(59);
+list.add(45);
+list.traversing();
+// console.log(list);
