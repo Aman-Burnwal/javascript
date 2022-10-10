@@ -1,24 +1,23 @@
-class List {
-    constructor(data) {
-        this.head = {
-            value: data,
-            next: null,
-        };
-        this.tail = this.head;
-        this.size = 1;
+function twoSum(a,n) {
+  let l = 0;
+  let r = a.length-1
+  
+  while (l < r) {
+    sum = a[l] + a[r]
+    if(sum > n){
+      r--;
     }
-    appendAdd(nodeData) {
-        let newNode = {
-            value: nodeData,
-            next: null,
-        }; 
-        this.tail.next = newNode;
-        this.tail = newNode;
-        this.size++;
 
+    else if(sum === n)
+    {
+      return [l,r]
     }
+
+    else{
+       return "No target match...!"
+      }
+  }
 }
 
-let list = new List(200)
-list.appendAdd(300)
-console.warn(list)
+let a = [2,7,11,15]
+console.log(twoSum(a,9))
