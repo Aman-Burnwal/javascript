@@ -23,18 +23,55 @@
  * @return {string[][]}
  */
 var groupAnagrams = function (strs) {
+    let arr = [...strs];
+    
 
     if (strs.length === 0 || strs.length === 1) return [strs]
 
-    const store = {};
+    let op = [];
+    // Input: strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+    // Output: [["bat"], ["nat", "tan"], ["ate", "eat", "tea"]]
+    for (let i = 0; i < strs.length; i++) {
 
+        op = strs[i];
+        op = op.toString().split("").sort().join("")
+        strs[i] = op;
 
+    }
+    op = [];
+    while(strs.length !== 0) {
+       
+        let curr = strs[0]
+        let curr1 = arr[0]
+        strs.splice(0, 1);
+        arr.splice(0, 1);
+
+        let val = [];
+        val.push(curr1)
+        
+        for (let j = 0; j < strs.length; j++) {
+
+            if (curr == strs[j]) { 
+                val.push(arr[j]);
+                strs.splice(j, 1);
+                arr.splice(j, 1);
+                j--
+            
+                
+            }
+        }
+        op.push(val)
+    }
+
+    return op;
     
 };
 
 
-function isAnagram()
+  
+
 
 const strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
 
 console.log(groupAnagrams(strs));
+
