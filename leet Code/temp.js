@@ -59,8 +59,61 @@ function isPalindrome(num) {
 
 }
 
-const queries = [1, 2, 3, 4, 5, 90], intLength = 3;
+// const queries = [1, 2, 3, 4, 5, 90], intLength = 3;
 
-console.log(kthPalindrome(queries, intLength));
+// console.log(kthPalindrome(queries, intLength));
 
 // console.log(isPalindrome(101))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const arr = [40, 30, 20, 40, 50, 30, 30, 40];
+
+
+
+let map = new Map()
+
+for (let i = 0; i < arr.length; i++) {
+    if (map.has(arr[i])) {
+        let a = map.get(arr[i])
+        a += 1;
+        map.set(arr[i], a)
+
+    } else {
+        map.set(arr[i], 1)
+    }
+}
+
+// console.log(map)
+let max = 0;
+let val = 0;
+map.forEach((value, key) => {
+    
+    // console.log(value)
+    if (value > val) {
+        val = value;
+        max = key;
+    }
+})
+
+console.log(max)
+
+
+
+
+
+
+
