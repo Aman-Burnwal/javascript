@@ -11,19 +11,28 @@
 
 function anagram(input) {
 
-    let leng = input.length;
+    if (input.length === 0 || input.length === 1) return input;
 
-    if (leng === 0 || leng === 1) return input;
+    let map = new Map();
 
-    let obj = {};
+    for (let i = 0; i < input.length; i++) {
+        let str = input[i];
+        let sortedStr = str.split('').sort().join('');
+        if (map.has(sortedStr)) {
+            map.get(sortedStr).push(str);
+        } else {
+            map.set(sortedStr, [str]);
+        }
+    }
 
-    input.map(i => {
-        let cur = i;
-        let stored = i.split('').sort().join('');
+    // console.log(map)
 
-        !obj[stored] ? obj[stored] = [cur] : obj[stored].push(cur);
-    })
-    return Object.values(obj);
+    let result = [];
+    for (let [key, value] of map) {
+        result.push(...value);
+    }
+
+    return result;
 }
 let input = ['data', "atad", "number", "tada", "adat", "bernum"]
 console.log(anagram(input))
