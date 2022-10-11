@@ -1,58 +1,66 @@
-function palindrome(number) {
-    
-    // smallest number of digits
-    let starting_number = Math.pow(10, number - 1)
-    // biggest number of digits
-    let ending_number = Math.pow(10, number) - 1;
+/**
+ * @param {number[]} queries
+ * @param {number} intLength
+ * @return {number[]}
+ */
+var kthPalindrome = function (queries, intLength) {
 
-    // printing our palindrome using loop 
-    // this loop help to itterata over every number / digits
-    for (starting_number; starting_number <= ending_number; starting_number++) {
+    let smallest_num = Math.pow(10, intLength - 1);
+    let biggest_num = Math.pow(10, intLength) - 1;
+ 
+    let arr = [];
+   
+    while (smallest_num <= biggest_num) {
+        
+        if (isPalindrome(smallest_num)) {
 
-        // default 1 - 9 is palindrome
-        if (starting_number <= 9) {
-            // printing the number
-            console.log(starting_number)
-            // no need to go lower code so it will jump to next itteration
-            continue;
-        } 
+            arr.push(smallest_num);
 
-        // calling our ispalindrome function to check palindrome
-        if (isPalindrome(starting_number)) {
-            // printing the number
-            console.log(starting_number)
         }
+        
+        smallest_num++;
     }
 
-}
+    // console.log(arr)
+    for (let i = 0; i < queries.length; i++) {
 
-// to check number is palindrome or not
+        // console.log(queries[i]);
+        // console.log(queries)
+        if (queries[i] <= arr.length) {
+            queries[i] = arr[queries[i] - 1]
+            
+        } else {
+            queries[i] = -1;
+        }
+    }
+    return queries;
+
+};
+
 function isPalindrome(num) {
+
+    if (num <= 9) return true;
+
     let org = num;
     let rev = 0;
 
-    // it will reverse the number
-    while (num >= 0) {
-        // getting reminder and saving it as a reverse number
+    while (num > 9) {
         rev = (rev * 10) + Math.floor(num % 10);
-        // removing reminders
         num = Math.floor(num / 10);
 
-        // adding last number in reverse number
         if (num <= 9) {
             rev = (rev * 10) + num;
-            break;
         }
-
-        
+        // console.log(rev)
     }
 
-    // cheacking is reverse number and orignal number is equal or not
-    return rev == org;
+    return rev === org;
+
+
 }
 
-// calling our function
-palindrome(2);
+const queries = [1, 2, 3, 4, 5, 90], intLength = 3;
 
+console.log(kthPalindrome(queries, intLength));
 
-
+// console.log(isPalindrome(101))
