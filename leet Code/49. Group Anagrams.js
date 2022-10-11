@@ -68,10 +68,32 @@ var groupAnagrams = function (strs) {
 };
 
 
-  
+// optimized solution
+/**
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+var groupAnagrams = function (input) {
+    let leng = input.length;
+
+    if (leng === 0 || leng === 1) return [input];
+
+    let obj = {};
+
+    input.map(i => {
+        let cur = i;
+        let stored = i.split('').sort().join('');
+
+        !obj[stored] ? obj[stored] = [cur] : obj[stored].push(cur);
+    })
+
+    let re = Object.values(obj);
+    return re;
+
+};
 
 
-const strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
+// const strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
 
-console.log(groupAnagrams(strs));
+// console.log(groupAnagrams(strs));
 
