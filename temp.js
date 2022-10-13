@@ -1,23 +1,34 @@
-function twoSum(a,n) {
-  let l = 0;
-  let r = a.length-1
-  
-  while (l < r) {
-    sum = a[l] + a[r]
-    if(sum > n){
-      r--;
-    }
+function binarysearch(arr, n, k) {
+  // code here
+  let start = 0;
+  let end = n - 1;
+  let mid = 0; 
 
-    else if(sum === n)
-    {
-      return [l,r]
-    }
 
-    else{
-       return "No target match...!"
-      }
+  while (start <= end) {
+
+    mid = parseInt((start + end) / 2);
+
+    // console.log(mid)
+
+    if (arr[mid] === k) {
+
+      return mid;
+
+    } else if (arr[mid] < k) {
+
+      start = mid + 1;
+      
+
+    } else if (arr[mid] > k) {
+      end = mid - 1;
+      
+    }
   }
+  return;
 }
 
-let a = [2,7,11,15]
-console.log(twoSum(a,9))
+N = 5
+arr = [1, 2, 3, 4, 5];
+k = 4;
+console.log(binarysearch(arr, N, k))
