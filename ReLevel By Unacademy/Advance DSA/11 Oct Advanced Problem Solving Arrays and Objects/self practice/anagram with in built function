@@ -1,0 +1,11 @@
+function Anagram(s1, s2) {
+    let str1 = s1.toLowerCase().split("").sort().join("");
+    let str2 = s2.toLowerCase().split("").sort().join("");
+
+    console.log(str1, str2)
+    return str1 === str2
+}
+
+let s1 = "Care";
+let s2 = "erac";
+console.log(Anagram(s1, s2))
