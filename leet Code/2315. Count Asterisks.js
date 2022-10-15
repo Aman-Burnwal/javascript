@@ -44,23 +44,48 @@ s contains an even number of vertical bars '|'.
  * @param {string} s
  * @return {number}
  */
+
+// without optimization
+
+// var countAsterisks = function (s) {
+//     let star = 0;
+//     let bar = 0;
+
+//     for (let i = 0; i < s.length; i++) {
+
+//         if (s[i] === "|") {
+//             bar++;
+//         }
+
+//         if (bar % 2 === 0 && s[i] === "*") {
+//             star++;
+//         } 
+//     }
+
+//     return star;
+// };
+
+
 var countAsterisks = function (s) {
-    let star = 0;
-    let bar = 0;
+    let barFound = false;
+    let count = 0;
 
     for (let i = 0; i < s.length; i++) {
 
-        if (s[i] === "|") {
-            bar++;
-        }
+        let character = s[i];
 
-        if (bar % 2 === 0 && s[i] === "*") {
-            star++;
-        } 
+        if (character == "|")
+            barFound = barFound ? false : true;
+         
+
+        else if (character == "*")
+            if (!barFound)
+                count++;
+
     }
-    
-    return star;
-};
+
+    return count;
+}
 
 const s = "yo|uar|e**|b|e***au|tifu|l";
 
