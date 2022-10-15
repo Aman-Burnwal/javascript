@@ -43,29 +43,20 @@ All the words in sentences[i] are separated by a single space.
  * @param {string[]} sentences
  * @return {number}
  */
-var mostWordsFound = function (sentences) {
+var mostWordsFound = function (sentence) {
 
-    let maxWords = 0;
+    let max = 0;
+
+    for (let i = 0; i < sentence.length; i++) {
+
+        const total = sentence[i].split(" ").length;
+
+        max = Math.max(total, max);
 
 
-    for (const sentence of sentences) {
-
-        console.log(sentence)
-
-        const splittedSentence = sentence.split(' ');
-
-        console.log(splittedSentence);
-
-        const l = splittedSentence.length;
-
-        console.log(l);
-
-        if (l > maxWords) {
-            maxWords = l;
-        }
     }
 
-    return maxWords;
+    return max;
 
 };
 

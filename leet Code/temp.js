@@ -1,43 +1,19 @@
-/**
- * @param {number[][]} matrix
- * @return {boolean}
- */
-var checkValid = function (matrix) {
+function maxmimumWord(sentence) {
+    let max = 0;
 
-    let num = matrix.length;
-    let set = new Set();
+    for (let i = 0; i < sentence.length; i++) {
 
-    for (let i = 1; i <= num; i++) {
-        set.add(i);
-    }
-    // console.log(set);
+        const total = sentence[i].split(" ").length;
 
-
-    for (let i = 0; i < matrix.length; i++) {
-
-        let temp = new Set(set);
-        let temp2 = new Set(set);
-    // console.log(temp);
+        max = Math.max(total, max);
         
 
-        for (let j = 0; j < matrix[i].length; j++) {
-
-            if (temp.has(matrix[i][j]) && temp2.has(matrix[j][i])) {
-                temp.delete(matrix[i][j]);
-                temp2.delete(matrix[j][i])
-            } else {
-                return false;
-            }
-        }
-        if (temp.size > 0 || temp2.size > 0) {
-            return false;
-        }
     }
 
+    return max;
+}
 
-    return true;
-};
 
-matrix = [[1, 2, 3], [3, 1, 2], [2, 3, 1]]; 
+const sentence = ["please wait", "continue to fight", "continue to win"];
 
-console.log(checkValid(matrix))
+console.log(maxmimumWord(sentence));
