@@ -58,6 +58,7 @@ var countAsterisks = function (s) {
             star++;
         } 
     }
+    
     return star;
 };
 
