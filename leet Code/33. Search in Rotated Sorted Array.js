@@ -53,7 +53,7 @@ var search = function (nums, target) {
 
         if (nums[left] <= nums[mid]) {
             
-            nums[left] <= target && nums[mid] <= target ? right = mid - 1 : left = mid + 1;
+            nums[left] <= target && nums[mid] >= target ? right = mid - 1 : left = mid + 1;
 
         } else {
 
