@@ -36,15 +36,47 @@ Follow up: Squaring each element and sorting the new array is very trivial, coul
  * @param {number[]} nums
  * @return {number[]}
  */
+
 var sortedSquares = function (nums) {
 
-    nums = nums.map(index =>  ( Math.pow(index, 2) ) )
+    let start = 0;
+    let end = nums.length - 1;
+    let newArray = [];
 
-    nums = nums.sort((a, b) => (a - b))
+    while (start <= end) {
 
-    return nums;
+        if (Math.abs(nums[start]) >= Math.abs(nums[end])) {
+
+            newArray.unshift(nums[start] * nums[start])
+
+
+            start++;
+        } else {
+
+            newArray.unshift(nums[end] * nums[end]);
+
+            end--;
+        }
+
+
+    }
+
+    return newArray;
 
 };
+
+// var sortedSquares = function (nums) {
+
+//     nums = nums.map(index =>  ( Math.pow(index, 2) ) )
+
+//     nums = nums.sort((a, b) => (a - b))
+
+//     return nums;
+
+// };
+
+
+
 
 const nums = [-4, -1, 0, 3, 10];
 
