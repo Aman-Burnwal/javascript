@@ -54,43 +54,21 @@ Both list1 and list2 are sorted in non-decreasing order.
  * @return {ListNode}
  */
 var mergeTwoLists = function (list1, list2) {
+    if (!list1) return list2;
 
-    if (list1.length === 0) return list2;
+    if (!list2) return list1;
 
-    if (list2.length === 0) return list1
+    if (list1.val < list2.val) {
 
-    let i = 0, j = 0;
-    let arr = [];
-
-    while (i < list1.length && j < list2.length) {
-
-        
-
-        if (list1[i] >= list2[j]) {
-      
-            arr.push(list2[j])
-            j++;
-
-        } else {
-            arr.push(list1[i])
-            i++;
-        }
-
+        list1.next = mergeTwoLists(list1.next, list2);
+        return list1;
+    } else {
+        list2.next = mergeTwoLists(list1, list2.next)
+        return list2;
     }
 
-    while (i < list1.length ) {
-        arr.push(list1[i]);
-        i++;
-
-    }
-    while (j < list2.length ) {
-        arr.push(list2[j]);
-        j++;
-
-    }
-    return arr;
 };
 
-const list1 = [1, 2,3], list2 = [0]
+let list1 = [1, 2,3], list2 = [1, 4, 5]
 
 console.log(mergeTwoLists(list1, list2))
