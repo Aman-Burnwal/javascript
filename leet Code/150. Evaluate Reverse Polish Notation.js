@@ -2,45 +2,42 @@
  * @param {string[]} tokens
  * @return {number}
  */
-var evalRPN = function (tokens) {
+var evalRPN = function (a) {
+    let s = [];
 
+    for (let i of a) {
 
-    let stack = [];
-
-    for (let i = 0; i < tokens.length; i++) {
-        
-        if (tokens[i] === "*") {
-
-            let temp = (stack[stack.length - 2]) * stack[stack.length - 1]
-            stack.pop();
-            stack[stack.length - 1] = temp;
-
-        } else if (tokens[i] === "/") {
-
-            let temp = parseInt(stack[stack.length - 2] / stack[stack.length - 1])
-            stack.pop();
-            stack[stack.length - 1] = temp;
-
-
-        } else if (tokens[i] === "+") {
-
-            let temp = (stack[stack.length - 2]) + stack[stack.length - 1]
-            stack.pop();
-            stack[stack.length - 1] = temp;
-
-        } else if (tokens[i] === "-") {
-
-            let temp = (stack[stack.length - 2]) - stack[stack.length - 1]
-            stack.pop();
-            stack[stack.length - 1] = temp;
+        if (Number(i) || i === "0") {
+            s.push(parseInt(i))
         } else {
 
-            stack.push(Number(tokens[i]))
-        }
-        console.log(stack)
-    }
-    return stack[0];
+            let l = s.pop();
+            let sl = s.pop();
 
+            switch (i) {
+                case "-":
+                    s.push(sl - l)
+                    break;
+
+                case "*":
+                    s.push(sl * l)
+                    break;
+
+                case "+":
+                    s.push(sl + l)
+                    break;
+
+                case "/":
+                    s.push(parseInt(sl / l))
+                    break;
+            }
+
+        }
+    }
+
+    return s[0]
 };
+
+
 
 console.log(evalRPN(["0", "3", "/"]))
