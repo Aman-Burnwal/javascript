@@ -18,11 +18,25 @@ class List {
             value: data,
             next: null
         }
-
+        this.size = 1;
         this.tail = this.head
+    }
+
+    appendNode(newData) {
+
+        let newNode = {
+            value: newData,
+            next: null,
+        }
+        this.tail.next = newNode;
+        this.tail = newNode;
+        this.size += 1;
     }
 }
 
-let list = new List();
+let list = new List(64);
+list.appendNode(32)
+list.appendNode(553);
+list.appendNode(456)
 
 console.log(list);
