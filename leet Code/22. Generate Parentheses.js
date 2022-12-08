@@ -21,4 +21,6 @@ const generateParenthesis = (n) => {
     return ans;
 };
 
+// https://embed.creately.com/cclS6u7Upy3?type=svg
+
 console.log(generateParenthesis(3))
