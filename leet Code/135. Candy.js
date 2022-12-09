@@ -27,7 +27,7 @@ var candy = function (ratings) {
         ratings[i + 1] < ratings[i] ? right[i] = right[i + 1] + 1 : right[i] = 1;
     }
 
-    
+
     let ans = 0
 
     for (let i = 0; i < left.length; i++) {
@@ -36,5 +36,6 @@ var candy = function (ratings) {
 
     return ans;
 
+    
 
 };
