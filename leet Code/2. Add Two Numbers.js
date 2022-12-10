@@ -41,6 +41,61 @@
  */
 var addTwoNumbers = function (l1, l2) {
 
-    
+    let newList = new ListNode(0);
+
+    let head = newList;
+
+    let carry = 0;
+
+    while (l1 && l2) {
+
+        // getting total value
+        let value = l1.val + l2.val + carry;
+        // finding carry
+        carry = Math.floor(value / 10);
+        // adding and assinging new node value
+        newList.next = new ListNode(value % 10);
+
+        // travelling to next node
+        newList = newList.next;
+        l1 = l1.next;
+        l2 = l2.next;
+
+
+    }
+
+
+    // suppose l1 length is greate than l2
+
+    while (l1) {
+
+        let value = l1.val + carry;
+
+        carry = Math.floor(value / 10);
+
+        newList.next = new ListNode(value % 10);
+
+        newList = newList.next;
+
+        l1 = l1.next;
+    }
+
+    // suppose l2 length is greate than l1
+
+    while (l2) {
+
+        let value = l2.val + carry;
+
+        carry = Math.floor(value / 10);
+
+        newList.next = new ListNode(value % 10);
+
+        newList = newList.next;
+        l2 = l2.next;
+    }
+
+    if (carry) newList.next = new ListNode(carry);
+
+    return head.next;
 
 };
