@@ -1,1 +1,1 @@
-count
+   ans += matrix[i][j]
