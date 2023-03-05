@@ -1,24 +1,37 @@
+// your code goes here
 
-function solution (n) {
+
+// var n = readline();
 
 
-  for (i = 1; Math.pow(i, 3) <= n; i++) {
+// let arr = [...n.split(", ")];
+// // console.log(arr);
 
-    for (j = n; j > 1; j = Math.floor(j / 3)) {
+let arr = [2, 4, 6];
+console.log(findingHcf(arr));
+function findingHcf(arr) {
 
-      for (k = 1;  Math.pow(k, 2) <= Math.pow(n, 5); k = k + 1) {
+    let hcf = arr[0];
+    for (let i = 1; i < arr.length; i++) {
 
-        console.log("a")
-      }
-      console.log("break")
+        hcf = find(hcf, arr[i]);
+
     }
-  }
 
-
+    return hcf;
 }
 
-solution(2)
+// console.log(arr)
+function find(hcf, val) {
 
+    if (hcf > val)  [hcf, val] = [val, hcf];
+
+    for (let i = hcf; i >= 1; i--) {
+
+        if (val % i === 0)   return i;
+    }
+
+}
 
 
 
