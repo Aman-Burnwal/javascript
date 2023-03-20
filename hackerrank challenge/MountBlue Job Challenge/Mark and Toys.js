@@ -1,5 +1,5 @@
 
-function climbingLeaderboard(prices, k) {
+function maximumToys(prices, k) {
     // Write your code here
 
 
