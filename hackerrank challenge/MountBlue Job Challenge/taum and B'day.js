@@ -1,16 +1,16 @@
 function taumBday(b, w, bc, wc, z) {
-    // Write your code here
+    // Calculate cost of black gifts
+    let minBC = Math.min(bc, wc + z);
+    let costBC = BigInt(b) * BigInt(minBC);
 
-    if (bc < wc && bc + z < wc) {
-        wc = bc + z;
-        
-        // return ((b * bc) + (w * wc))
+    // Calculate cost of white gifts
+    let minWC = Math.min(wc, bc + z);
+    let costWC = BigInt(w) * BigInt(minWC);
 
-    } else if (bc > wc && bc > wc + z) {
-        // console.log(b)
-        bc = wc + z;
-    }
-    return ((b * bc) + (w * wc));
+    // Calculate total cost
+    let totalCost = costBC + costWC;
+
+    return totalCost.toString();
 
 }
 
