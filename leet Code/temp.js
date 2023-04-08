@@ -1,52 +1,45 @@
-/**
- * @param {number[]} nums1
- * @param {number[]} nums2
- * @return {number}
- */
-var findMedianSortedArrays = function (nums1, nums2) {
-    let len1 = nums1.length;
+// function f(val, w, c, n, dp) {
+//     if (c == 0 || n == 0) return 0;
+//     if(dp[n][c] != -1) return dp[n][c]
+//     if (w[n] <= c) {
+//         let include = val[n] + f(val, w, c - w[n], n - 1,dp)
+//         let exclude = f(val, w, c, n - 1,dp)
 
-    let len2 = nums2.length;
+//          dp[n][c] = Math.max(include, exclude,dp)
+//          return dp[n][c] 
+//     } 
 
-    let len3 = 0;
+//     else {
+//         dp[n][c] = f(val, w, c, n - 1);
+//         return dp[n][c];
+//     } 
+// }
 
-    const newarr = [];
 
-    let i = 0, j = 0;
 
-    while (i < len1 && j < len2) {
-        if (nums1[i] <= nums2[j]) {
-            newarr[len3] = nums1[i];
-            i++;
-        } else {
-            newarr[len3] = nums2[j];
-            j++
-        }
-        len3++;
-        
+
+function f(val, w, c, n, dp) {
+    if (c == 0 || n == 0) return 0;
+    if (dp[n][c] != 0) return dp[n][c];
+
+    if (w[n] > c) return dp[n][c] = f(val, w, c, n - 1, dp);
+
+
+    else {
+        let include = val[n] + f(val, w, c - w[n], n - 1, dp)
+        let exclude = f(val, w, c, n - 1, dp)
+
+        return dp[n][c] = Math.max(include, exclude)
     }
-    
-    while (i < len1) {
-        newarr[len3] = nums1[i];
-        i++, len3++;
-    }
+}
 
-    console.log(newarr)
+let val = [15, 14, 10, 45, 30];
+let w = [2, 5, 1, 3, 4];
+let c = 7;
 
-    while (j < len2) {
-        newarr[len3] = nums2[j];
-        j++, len3++
-    }
+let dp = Array(val.length + 1).fill().map(() => Array(c + 1).fill(0))
+// console.log(dp)
 
 
-    let rem = (len3) % 2;
-    let mid = Math.floor(len3 / 2);
-
-    // console.log(mid)
-    
-
-    return rem === 1 ? newarr[mid].toFixed(5) : ((newarr[mid] + newarr[mid  - 1]) / 2).toFixed(5);
-};
-
-const nums1 = [0, 0, 0, 0, 0], nums2 = [-1, 0, 0, 0, 0, 0, 1]
-console.log(findMedianSortedArrays(nums1, nums2))
+let Zero1KnapSack = f(val, w, c, val.length - 1, dp);
+console.log(Zero1KnapSack)
