@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+
+</head>
+<body>
+    <h1>Creating a clock using set interval () and clear interval </h1>
+    <p id="clock">your time will be display here</p>
+    <button id="start" type="button" >Start</button>
+    <button id="stop" type="button" >Stop</button>
+
+</body>
+    <script>
+
+        const display = document.querySelector('#clock');
+        const start = document.querySelector('#start');
+        const stop = document.querySelector('#stop');
+        let interval;
+
+        start.addEventListener('click', ()=>{
+           
+            interval = setInterval(myTimer, 1000);
+        })
+
+        function myTimer(){
+
+            const date = new Date();
+            display.innerHTML =  date.toLocaleTimeString();
+
+        }
+        stop.addEventListener('click', ()=> {
+            clearInterval(interval);
+        })
+        
+
+    </script>
+</html>
