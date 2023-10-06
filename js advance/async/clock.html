@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clock</title>
 
+   <style>
+    body , button{
+        background-color: black;
+        color: whitesmoke;
+        
+    }
+    button {
+        background-color: black;
+    }
+    
+   </style>
+
 </head>
-<body>
+<body >
     <h1>Creating a clock using set interval () and clear interval </h1>
     <p id="clock">your time will be display here</p>
     <button id="start" type="button" >Start</button>
@@ -33,6 +45,7 @@
         }
         stop.addEventListener('click', ()=> {
             clearInterval(interval);
+           
         })
         
 
