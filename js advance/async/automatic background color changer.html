@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">`
+
+    <title>color changer</title>
+</head>
+<body>
+
+    <h1>This form will change it's bacground color automatically if you click it <span>Change</span> button</h1>
+    <button type="button" id="btn1" >Change color</button>
+    <form id="form">
+        <fieldset id="fieldset">
+
+            <legend id="legend">This is a nomal form</legend>
+
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName">
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName">
+
+
+        </fieldset>
+    </form>
+    <h1>To stop clik the stop <span><button id="btn2">Stop me</button></span></h1>
+
+    <script>
+
+        // generate the color
+        const generateColor = function() {
+            const colorCombination = "0123456789ABCDEF";
+            let color = "#"
+
+            for(let i = 0; i < 6; i++) {
+                
+                color += colorCombination[Math.floor(Math.random()* 16)];
+                // console.log(color);
+                
+            }
+            return color;
+        }
+        console.log(generateColor()); 
+       
+        const form = document.querySelector('#form');
+        const start = document.querySelector('#btn1');
+        const stop = document.querySelector('#btn2');
+
+
+        // set the color
+        const setColor = ()=> {
+            form.style.backgroundColor = generateColor();
+        }
+        
+        // to change the color
+        let interval;
+        start.addEventListener('click', () => {
+            if(!interval) {
+                interval = setInterval(setColor, 1000);
+            }
+        })
+
+
+        // to stp the change
+        stop.addEventListener('click', () => {
+          
+            clearInterval(interval);
+            interval = null;
+            
+        })
+
+        
+
+    </script>
+</body>
+</html>
