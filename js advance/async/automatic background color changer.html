@@ -1,77 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">`
-
-    <title>color changer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
 </head>
-<body>
 
-    <h1>This form will change it's bacground color automatically if you click it <span>Change</span> button</h1>
-    <button type="button" id="btn1" >Change color</button>
+<body>
+    <!-- Heading explaining the purpose of the form -->
+    <h1>This form will change its background color automatically if you click the <span>Change</span> button</h1>
+
+    <!-- Button to start changing the color -->
+    <button type="button" id="btn1">Change color</button>
+
+    <!-- Form container -->
     <form id="form">
         <fieldset id="fieldset">
+            <!-- Form title -->
+            <legend id="legend">This is a normal form</legend>
 
-            <legend id="legend">This is a nomal form</legend>
-
+            <!-- First Name input -->
             <label for="firstName">First Name</label>
             <input type="text" id="firstName">
 
+            <!-- Last Name input -->
             <label for="lastName">Last Name</label>
             <input type="text" id="lastName">
-
-
         </fieldset>
     </form>
-    <h1>To stop clik the stop <span><button id="btn2">Stop me</button></span></h1>
+
+    <!-- Heading for stopping the color change -->
+    <h1>To stop, click the <span><button id="btn2">Stop me</button></span></h1>
 
     <script>
-
-        // generate the color
-        const generateColor = function() {
+        // Function to generate a random color based on hexadecimal values
+        const generateColor = function () {
             const colorCombination = "0123456789ABCDEF";
-            let color = "#"
+            let color = "#";
 
-            for(let i = 0; i < 6; i++) {
-                
-                color += colorCombination[Math.floor(Math.random()* 16)];
-                // console.log(color);
-                
+            for (let i = 0; i < 6; i++) {
+                color += colorCombination[Math.floor(Math.random() * 16)];
             }
             return color;
         }
-        console.log(generateColor()); 
-       
+
+        // Get references to HTML elements
         const form = document.querySelector('#form');
         const start = document.querySelector('#btn1');
         const stop = document.querySelector('#btn2');
 
-
-        // set the color
-        const setColor = ()=> {
-            form.style.backgroundColor = generateColor();
+        // Function to set the background color of the form
+        const setColor = () => {
+            let color;
+            do {
+                color = generateColor();
+            } while (color.length !== 7); // Ensure the color has 7 characters (including the '#')
+            form.style.backgroundColor = color;
         }
-        
-        // to change the color
+
+        // Interval variable to store the timer
         let interval;
+
+        // Event listener to start changing the color
         start.addEventListener('click', () => {
-            if(!interval) {
+            if (!interval) {
                 interval = setInterval(setColor, 1000);
             }
         })
 
-
-        // to stp the change
+        // Event listener to stop changing the color
         stop.addEventListener('click', () => {
-          
             clearInterval(interval);
             interval = null;
-            
         })
-
-        
-
     </script>
 </body>
+
 </html>
