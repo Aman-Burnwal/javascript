@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: beige;
+        }
+
+        #h1 {
+            text-align: center;
+            display: block;
+            margin-top: 0;
+        }
+
+        #page {
+            text-align: center;
+        }
+
+        p {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="h1">
+        <label for="userName"> Please write your github userName </label>
+        <input type="text" id="userName" placeholder="userName" required  />
+        <input type="submit" id="submit" value = "Submit" />
+    </div>
+    <div id="page">
+        <p id="display">your data will be display here</p>
+    </div>
+</body>
+    <script>
+        const dispaly = document.querySelector("#display");
+        const userName = document.getElementById("userName");
+        const submit = document.getElementById("submit");
+
+        let url = "https://api.github.com/users/";
+        submit.addEventListener("click", (e)=> {
+            // console.log(userName.value)
+            const requestApiURL = url += userName.value;
+            // const requestApiURL = "https://api.github.com/users/Aman-Burnwal";
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", requestApiURL);
+            xhr.onreadystatechange = ()=> {
+                
+                if(xhr.readyState == 4) {
+                    const data = JSON.parse(xhr.responseText);
+                    const para = document.createElement("p");
+
+                    const textpara =  document.createTextNode(data == undefined ? `your total follower is ${data.followers} ` : 'wrong github username');
+                    para.appendChild(textpara);
+                    dispaly.appendChild(para);
+                }
+            }
+            xhr.send();
+
+        })
+
+        
+    </script>
+</html>
