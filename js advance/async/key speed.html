@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed tester</title>
+    <style>
+        body {
+            display: center;
+            background-color: black;
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <h1>Speed tester</h1>
+
+    <button type="button">click me to see the magic</button>
+    <p id="dispaly">Data will display here</p>
+</body>
+
+    <script>
+        const button = document.querySelector('button');
+        const dispaly = document.querySelector('#dispaly');
+        button.addEventListener('click', (e)=> {
+            dispaly.innerHTML = e.toElement;;
+            console.log(e.target.innerText);
+        })
+    </script>
+</html>
